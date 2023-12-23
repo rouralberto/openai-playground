@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {useState} from 'react';
+import {Fragment, useState} from 'react';
 
 export default function Home () {
   const [imagePromptInput, setImagePromptInput,] = useState("");
@@ -51,7 +51,7 @@ export default function Home () {
     }
   }
 
-  return (<div>
+  return (<Fragment>
     <Head>
       <title>OpenAI API Playground</title>
       <link rel="stylesheet"
@@ -75,7 +75,7 @@ export default function Home () {
       </form>
       <blockquote className="blockquote mt-5">{textResult}</blockquote>
 
-      <hr className="m-5"/>
+      <hr className="my-5"/>
 
       <h1 className="h2 mt-5 mb-3">Generate an image</h1>
       <form onSubmit={imageOnSubmit}>
@@ -92,5 +92,5 @@ export default function Home () {
       <img alt="dall-e" className="my-5 mw-100" src={imageResult}/>
 
     </main>
-  </div>);
+  </Fragment>);
 }
