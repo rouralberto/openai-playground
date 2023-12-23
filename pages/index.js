@@ -89,7 +89,7 @@ export default function Home () {
         />
         <input type="submit" className="btn btn-secondary" value="Submit"/>
       </form>
-      <img alt="dall-e" className="mt-5 mw-100" src={imageResult}/>
+      <img alt="dall-e" className="my-5 mw-100" src={imageResult}/>
 
     </main>
   </div>);
