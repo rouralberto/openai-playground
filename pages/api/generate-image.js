@@ -11,10 +11,10 @@ export default async function (req, res) {
   }
 
   const request = {
-    model: "dall-e-2",
+    model: "dall-e-3",
     prompt,
     n: 1,
-    size: "512x512",
+    size: "1024x1024",
   };
 
   try {
