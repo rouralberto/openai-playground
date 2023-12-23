@@ -14,7 +14,7 @@ export default async function (req, res) {
     model: "dall-e-2",
     prompt,
     n: 1,
-    size: "320x320",
+    size: "512x512",
   };
 
   try {
