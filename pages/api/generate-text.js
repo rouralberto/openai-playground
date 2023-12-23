@@ -3,16 +3,16 @@ import {Configuration, OpenAIApi} from 'openai';
 const openai = new OpenAIApi(new Configuration({apiKey: process.env.OPENAI_API_KEY}));
 
 export default async function (req, res) {
-  let input = req.body.prompt || '';
+  let prompt = req.body.prompt || '';
 
-  if (input.trim().length === 0) {
+  if (prompt.trim().length === 0) {
     res.status(400).json({error: {message: 'Prompt cannot be empty'}});
     return;
   }
 
   const request = {
     model: 'text-davinci-003',
-    prompt: input,
+    prompt,
     temperature: .6,
     max_tokens: 1024,
     top_p: 1,
